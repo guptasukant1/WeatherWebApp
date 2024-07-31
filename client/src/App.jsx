@@ -9,7 +9,7 @@ import ForecastWeather from "./components/ForecastWeather/ForecastWeather";
 function App() {
 
     const [currentWeather, setCurrentWeather] = useState(null)
-    const   [forecastWeather, setForecastWeather] = useState(null)
+    const [forecastWeather, setForecastWeather] = useState(null)
 
     const handleOnSearchChange = (searchData)=>{
         const [lat, lon] = searchData.value.split(" ")
@@ -31,12 +31,12 @@ function App() {
     console.log(forecastWeather);
 
     return (
-					<div className="container">
-						<Search onSearchChange={handleOnSearchChange} />
-						{currentWeather && <CurrentWeather data={currentWeather} />}
-						{forecastWeather && <ForecastWeather data={forecastWeather} />}
-					</div>
-				);
+        <div className="container">
+            <Search onSearchChange={handleOnSearchChange} />
+            {currentWeather && <CurrentWeather data={currentWeather} />}
+            {forecastWeather && <ForecastWeather data={forecastWeather} />}
+        </div>
+    );
 }
 
 export default App
